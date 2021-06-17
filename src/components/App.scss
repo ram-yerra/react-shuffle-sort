@@ -1,0 +1,107 @@
+$dark-blue: #2F454E;//3, 5, 9;
+$medium-blue: #2B8EAD;//2, 4
+$light-blue: #6F98A8;// 1, 8;
+$light-gray: #BFBFBF;// 6, 7;
+$black: #000;
+$white: #fff;
+$gray1: #EFEFEF;
+$button-blue: #72C3DC;
+$cards: ("0": $light-blue, "1": $medium-blue, "2": $dark-blue, "3": $medium-blue, "4": $dark-blue, "5": $light-gray, "6": $light-gray, "7": $light-blue, "8": $dark-blue);
+
+h3, p {
+    color: $black;
+    text-align: center;
+}
+
+.shuffle-sort-container {
+    display: flex;
+    flex-direction: row;    
+    padding: 16px;
+    width: calc(100% - 32px);
+    .numbers-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        .card {
+            color: $white;
+            font-size: 2rem;
+            font-weight: 600;
+            height: 120px;
+            width: calc((100% - 32px) / 3);  
+            display: flex;          
+            align-items: center;
+            justify-content: center;          
+        }
+        @each $num, $color in $cards {
+            .card-#{$num} {
+                background: $color;
+                border-left: 10px solid $color;
+            }
+        }
+    }
+    .buttons-container {
+        width: 20%;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        button {
+            width: 100%;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            background: $button-blue;
+            border-radius: 10px;
+            height: 40px;
+            color: $white;
+            border: none;
+            box-shadow: 2px 2px 2px $dark-blue;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    h3 {
+        background: $black;
+        color: $white;
+        height: 50px;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9;
+    }
+    p {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        z-index: 9;
+    }
+    .shuffle-sort-container {
+        position: absolute;
+        height: calc(100% - 130px);
+        width: calc(100% - 32px);
+        top: 60px;
+        display: flex;
+        flex-direction: column-reverse; 
+        overflow-y: auto; 
+        .numbers-container,
+        .buttons-container {
+            width: 100%;
+        }
+        .buttons-container {
+            margin-left: 0;
+        }
+        .numbers-container {
+            .card {
+                width: 100%;
+                margin-bottom: 5px;
+                height: 50px;
+                background: $gray1;
+                color: $black;
+            }
+        }
+    }
+}
+
+
