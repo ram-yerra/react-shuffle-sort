@@ -7,7 +7,7 @@ module.exports = {
   output: {
     publicPath: "/react-shuffle-sort/",
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   devServer: {
     port: 3000,
@@ -29,6 +29,15 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
+  },
+  performance: {
+    hints: false
+  },
+  optimization: {
+    splitChunks: {
+      minSize: 10000,
+      maxSize: 250000,
+    }
   },
   plugins: [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin({ template: './public/index.html' }), new MiniCssExtractPlugin()],
 }
