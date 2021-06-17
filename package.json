@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "serve": "webpack serve --mode development",
     "build": "webpack --mode development",
     "test": "jest"
   },
   "keywords": [],
+  "homepage": "http://yrkapil.github.io/react-shuffle-sort",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +26,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.1.3",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.1",
     "html-webpack-plugin": "^5.3.1",
     "jest": "^27.0.4",
     "mini-css-extract-plugin": "^1.6.0",
@@ -35,7 +39,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "jest": {
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "moduleNameMapper": {
       "^.+\\.(css|sass|scss)$": "babel-jest"
     }
