@@ -1,0 +1,111 @@
+h3, p {
+  color: #000;
+  text-align: center; }
+
+.shuffle-sort-container {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  width: calc(100% - 32px); }
+  .shuffle-sort-container .numbers-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%; }
+    .shuffle-sort-container .numbers-container .card {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+      height: 120px;
+      width: calc((100% - 32px) / 3);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .shuffle-sort-container .numbers-container .card-0 {
+      background: #6F98A8;
+      border-left: 10px solid #6F98A8; }
+    .shuffle-sort-container .numbers-container .card-1 {
+      background: #2B8EAD;
+      border-left: 10px solid #2B8EAD; }
+    .shuffle-sort-container .numbers-container .card-2 {
+      background: #2F454E;
+      border-left: 10px solid #2F454E; }
+    .shuffle-sort-container .numbers-container .card-3 {
+      background: #2B8EAD;
+      border-left: 10px solid #2B8EAD; }
+    .shuffle-sort-container .numbers-container .card-4 {
+      background: #2F454E;
+      border-left: 10px solid #2F454E; }
+    .shuffle-sort-container .numbers-container .card-5 {
+      background: #BFBFBF;
+      border-left: 10px solid #BFBFBF; }
+    .shuffle-sort-container .numbers-container .card-6 {
+      background: #BFBFBF;
+      border-left: 10px solid #BFBFBF; }
+    .shuffle-sort-container .numbers-container .card-7 {
+      background: #6F98A8;
+      border-left: 10px solid #6F98A8; }
+    .shuffle-sort-container .numbers-container .card-8 {
+      background: #2F454E;
+      border-left: 10px solid #2F454E; }
+  .shuffle-sort-container .buttons-container {
+    width: 20%;
+    margin-bottom: 10px;
+    margin-left: 10px; }
+    .shuffle-sort-container .buttons-container button {
+      width: 100%;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      background: #72C3DC;
+      border-radius: 10px;
+      height: 40px;
+      color: #fff;
+      border: none;
+      box-shadow: 2px 2px 2px #2F454E; }
+
+@media (max-width: 376px) {
+  h3 {
+    background: #000;
+    color: #fff;
+    height: 50px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9; }
+  p {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 9; }
+  .shuffle-sort-container {
+    position: absolute;
+    height: calc(100% - 130px);
+    width: calc(100% - 32px);
+    top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto; }
+    .shuffle-sort-container .numbers-container,
+    .shuffle-sort-container .buttons-container {
+      width: 100%; }
+    .shuffle-sort-container .buttons-container {
+      margin-left: 0; }
+    .shuffle-sort-container .numbers-container .card {
+      width: 100%;
+      margin-bottom: 5px;
+      height: 50px;
+      background: #EFEFEF;
+      color: #000; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #EFEFEF; }
+
+@media (max-width: 376px) {
+  body {
+    background: #FFF; } }
+

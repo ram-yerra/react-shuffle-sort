@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #EFEFEF;
+}
+
+@media (max-width: 376px) {
+    body {
+        background: #FFF;
+    }
+}

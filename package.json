@@ -1,0 +1,49 @@
+{
+  "name": "react-shuffle-sort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "webpack serve --mode development",
+    "build": "webpack serve --mode production",
+    "test": "jest"
+  },
+  "keywords": [],
+  "homepage": "http://yrkapil.github.io/react-shuffle-sort",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.3",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "react-hot-loader": "^4.13.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.27.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|sass|scss)$": "babel-jest"
+    }
+  }
+}
