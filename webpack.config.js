@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   output: {
+    publicPath: "/react-shuffle-sort/",
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
   },
